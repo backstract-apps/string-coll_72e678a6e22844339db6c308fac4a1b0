@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: string-coll_72e678a6e22844339db6c308fac4a1b0-depl
+  labels:
+    app: string-coll_72e678a6e22844339db6c308fac4a1b0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: string-coll_72e678a6e22844339db6c308fac4a1b0
+  template:
+    metadata:
+      labels:
+        app: string-coll_72e678a6e22844339db6c308fac4a1b0
+    spec:
+      containers:
+        - name: string-coll_72e678a6e22844339db6c308fac4a1b0
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:string-coll_72e678a6e22844339db6c308fac4a1b0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9008
